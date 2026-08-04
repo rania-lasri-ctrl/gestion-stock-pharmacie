@@ -1,0 +1,320 @@
+/* ===== Global ===== */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f9;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #333;
+
+}
+
+
+
+/* ===== Navbar ===== */
+
+
+nav {
+
+    background: #1f2937;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+
+nav h2 {
+
+    margin: 0;
+
+}
+
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    font-size: 16px;
+
+}
+
+
+
+nav a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* ===== Titles ===== */
+
+
+h1 {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #1f2937;
+
+}
+
+
+
+/* ===== Home Page ===== */
+
+
+.home {
+
+    text-align: center;
+
+    margin-top: 100px;
+
+}
+
+
+
+.home p {
+
+    font-size: 18px;
+
+    margin: 20px;
+
+}
+
+
+
+/* ===== Buttons ===== */
+
+
+.btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+}
+
+
+
+.btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+
+/* ===== Table Produits ===== */
+
+
+table {
+
+    width: 95%;
+
+    margin: 30px auto;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    box-shadow: 0 0 10px #ccc;
+
+}
+
+
+
+th {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px;
+
+    text-align: center;
+
+}
+
+
+
+td {
+
+    padding: 10px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+
+tr:hover {
+
+    background: #f1f5f9;
+
+}
+
+
+
+/* ===== Formulaire ===== */
+
+
+form {
+
+    width: 400px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px #ccc;
+
+}
+
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+
+}
+
+
+
+input, select, textarea {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* ===== Cards (si utilisées) ===== */
+
+
+.container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+
+.card {
+
+    background: white;
+
+    width: 300px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px #ccc;
+
+}
+
+
+
+.card h2 {
+
+    color: #2563eb;
+
+}
+
+
+
+/* ===== Delete button ===== */
+
+
+.btn-delete {
+
+    background: #dc2626;
+
+}
+
+
+
+.btn-delete:hover {
+
+    background: #b91c1c;
+
+}
+
+
+
+/* ===== Footer ===== */
+
+
+footer {
+
+    background: #1f2937;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    margin-top: 50px;
+
+}

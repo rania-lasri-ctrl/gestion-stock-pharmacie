@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Liste des Produits</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <h2>💊 Gestion Pharmacie</h2>
+
+    <div>
+        <a href="/">Accueil</a>
+        <a href="/produits-page">Produits</a>
+        <a href="/produits/ajouter">Ajouter Produit</a>
+    </div>
+
+</nav>
+
+
+
+<h1>Liste des Produits</h1>
+
+
+
+<div style="text-align:center;margin:20px;">
+
+    <a class="btn" href="/produits/ajouter">
+        + Ajouter Produit
+    </a>
+
+</div>
+
+
+
+
+<table>
+
+
+    <thead>
+
+    <tr>
+
+        <th>ID</th>
+
+        <th>Nom</th>
+
+        <th>Description</th>
+
+        <th>Prix</th>
+
+        <th>Code Barre</th>
+
+        <th>Date Expiration</th>
+
+        <th>Catégorie</th>
+
+        <th>Fournisseur</th>
+
+        <th>Fabricant</th>
+
+        <th>Pays Origine</th>
+
+        <th>Dosage</th>
+
+        <th>Tags</th>
+
+        <th>Actions</th>
+
+
+    </tr>
+
+
+    </thead>
+
+
+
+
+    <tbody>
+
+
+    <tr th:each="p : ${produits}">
+
+
+        <td th:text="${p.id}"></td>
+
+
+        <td th:text="${p.nom}"></td>
+
+
+        <td th:text="${p.description}"></td>
+
+
+        <td th:text="${p.prix} + ' DH'"></td>
+
+
+        <td th:text="${p.codeBarre}"></td>
+
+
+        <td th:text="${p.dateExpiration}"></td>
+
+
+
+        <!-- Categorie -->
+
+        <td th:text="${p.categorie != null ? p.categorie.nom : 'N/A'}"></td>
+
+
+
+        <!-- Fournisseur -->
+
+        <td th:text="${p.fournisseur != null ? p.fournisseur.nom : 'N/A'}"></td>
+
+
+
+        <!-- Detail Produit -->
+
+        <td th:text="${p.detailProduit != null ? p.detailProduit.fabricant : 'N/A'}"></td>
+
+
+        <td th:text="${p.detailProduit != null ? p.detailProduit.paysOrigine : 'N/A'}"></td>
+
+
+        <td th:text="${p.detailProduit != null ? p.detailProduit.dosage : 'N/A'}"></td>
+
+
+
+        <!-- Tags -->
+
+        <td>
+
+        <span th:if="${p.tags != null}"
+              th:each="tag : ${p.tags}"
+              th:text="${tag.libelle + ' '}">
+        </span>
+
+
+        </td>
+
+
+
+
+        <!-- Actions -->
+
+        <td>
+
+
+            <a class="btn"
+               th:href="@{'/produits/delete/' + ${p.id}}">
+                Supprimer
+            </a>
+
+
+        </td>
+
+
+
+    </tr>
+
+
+    </tbody>
+
+
+</table>
+
+
+
+</body>
+
+</html>
